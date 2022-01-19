@@ -6,6 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
+    @Output() submitted = new EventEmitter<string>()
     term = '';
 
   constructor() { }
@@ -14,7 +15,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   onFormSubmit() {
-      console.log(this.term);
+      this.submitted.emit(this.term);
       return false;
   }
 }
