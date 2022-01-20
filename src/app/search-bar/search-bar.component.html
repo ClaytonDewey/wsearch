@@ -1,3 +1,5 @@
-<form (submit)="onFormSubmit()">
-    <input class="input" (input)="term = $any($event).target.value" autofocus />
-</form>
+<div class="box mb-5">
+    <form (submit)="onFormSubmit()">
+        <input class="input" (input)="term = $any($event).target.value" placeholder="Enter Search Term" autofocus />
+    </form>
+</div>
